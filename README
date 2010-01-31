@@ -5,8 +5,9 @@ So ...
 THE README FILE
 ===============
 
-Running groof of concept, not actual stuff.
-
+This is only a proof of concept. It works, but only validates ideas. Nothing
+useable for real here.
+u
 This small piece of codes runs a browser based on the webkit library (safari,
 chrome) and runs a script in it. Commands are opan and assert. assert just
 matches some text against the full html (yeah, told ya it was a POC).
@@ -23,6 +24,33 @@ INSTALLATION
  - needs pygtk-2.0
  - needs pywebkitgtk (latest)
 
+WORK DIRECTIONS
+===============
+
+To have a useable software, I need to figure out :
+	- how webkit helps me in cookies management
+	- how I can have independant sessions (user does something in frontend,
+	  admin validates, user come back, etc ...)
+	- 1-1 association between some dom and the script string. How can we update ?
+		- ex: 
+			$('a', 1) => first link on the page. ok but what if we add a link
+			before ? how can i find this back in webkit ? how will i write this
+			string if user clicks on first link on the page (i mean what does
+			webkit expose, in what signal) ? how can i find this from the
+			string, and say webkit "click there please" ?
+
+REFERENCE LINKS
+===============
+
+Webkit GTK API (C) (no python api, but it's the same, just understand that
+python object mappings are translated by (classname)_(method):
+
+	http://webkitgtk.org/reference/index.html
+
+pywebkitgtk home (not much info
+
+	http://code.google.com/p/pywebkitgtk/
+	
 HAZARDOUS ZONE (random thoughts)
 ================================
 
