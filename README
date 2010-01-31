@@ -5,9 +5,18 @@ So ...
 THE README FILE
 ===============
 
-This (very) small piece of code, under 100 lines in the first commit, which was already running, is:
+This (very) small piece of code, under 100 lines in the first commit, which was
+already running, is:
  - a discovery of python bindings for webkit/gtk (pywebkitgtk).
- - a proof of concept of a way to do functionnal testing using opensource browser library webkit.
+ - a proof of concept of a way to do functionnal testing using opensource
+   browser library webkit.
+
+Understand this is only a proof of concept.
+
+INSTALLATION
+============
+ - needs pygtk-2.0
+ - needs pywebkitgtk (latest)
 
 HAZARDOUS ZONE (random thoughts)
 ================================
@@ -36,7 +45,8 @@ in sf functional test (or in any other func test framework)
 ->end()
 
 version => language version
-the tester can be completely bypassed if nor configured, node not available, specific option used
+the tester can be completely bypassed if nor configured, node not available,
+specific option used
 
 now the crazy
 
