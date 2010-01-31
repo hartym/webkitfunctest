@@ -5,13 +5,18 @@ So ...
 THE README FILE
 ===============
 
-This (very) small piece of code, under 100 lines in the first commit, which was
-already running, is:
- - a discovery of python bindings for webkit/gtk (pywebkitgtk).
- - a proof of concept of a way to do functionnal testing using opensource
-   browser library webkit.
+Running groof of concept, not actual stuff.
 
-Understand this is only a proof of concept.
+This small piece of codes runs a browser based on the webkit library (safari,
+chrome) and runs a script in it. Commands are opan and assert. assert just
+matches some text against the full html (yeah, told ya it was a POC).
+
+For now, it will run a browser on a X11 server, execute the script (python
+tuple of tuples of script tokens) and show the test result on stdout.
+
+The idea is to use a tester node which can run browsers, with optional external
+output, using X11, to do simple functionnal tests from within another
+independant software.
 
 INSTALLATION
 ============
