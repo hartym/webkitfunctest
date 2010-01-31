@@ -1,0 +1,49 @@
+Hum, I may add a readme before people ask me about this stuff.
+
+So ...
+
+THE README FILE
+===============
+
+This (very) small piece of code, under 100 lines in the first commit, which was already running, is:
+ - a discovery of python bindings for webkit/gtk (pywebkitgtk).
+ - a proof of concept of a way to do functionnal testing using opensource browser library webkit.
+
+HAZARDOUS ZONE (random thoughts)
+================================
+
+Don't dream, that's just ideas, not actual work.
+
+ dv1 dv2
+  |  |
+ [ VCS ]
+    |
+   [CI] <-> [WebKit+API]
+
+dv(n) = development boxes
+vcs = version control
+ci = continuous integration
+
+in sf functional test (or in any other func test framework)
+
+->with('webkitapi-1.0')->begin()
+	->do('
+		open http://www.google.com/
+		assert $title contains "Google"
+		click $("a#test")
+		assert ...
+	')
+->end()
+
+version => language version
+the tester can be completely bypassed if nor configured, node not available, specific option used
+
+now the crazy
+
+sf func test:
+
+->with('webkitapi-1.0')->begin()
+	->record('182.168.0.11:0') # configure unix DISPLAY to show the recorder
+->end()
+
+tester comments the record line, and write generated code (commented maybe, or not, below)
